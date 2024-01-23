@@ -1,0 +1,42 @@
+<div class="move-container">
+  <div class="section">
+    <span>Input</span>
+    <div class="input" [innerHTML]="inputDisplay"></div>
+  </div>
+  <div class="section">
+    <span>Properties</span>
+    <div class="default-data">
+      {{ propertiesDisplay }}
+    </div>
+  </div>
+  <div class="section">
+    <span>Damage</span>
+    <div class="default-data">{{ move?.damage }}</div>
+  </div>
+  <div class="section">
+    <span>Startup Frames</span>
+    <div class="default-data">{{ move?.startup }}</div>
+  </div>
+  <div class="section" *ngIf="!move?.breakInput?.length">
+    <span>Block Frames</span>
+    <div class="default-data">{{ move?.blockFrames }}</div>
+  </div>
+  <div class="section" *ngIf="move?.breakInput?.length">
+    <span>Break Frames</span>
+    <div class="default-data">{{ move?.blockFrames }}</div>
+  </div>
+  <div class="section">
+    <span>Hit Frames</span>
+    <div class="default-data">{{ move?.hitFrames }}</div>
+  </div>
+  <div class="section" *ngIf="!move?.breakInput?.length">
+    <span>Counter Hit Frames</span>
+    <div class="default-data">{{ move?.counterFrames }}</div>
+  </div>
+  <div class="section" *ngIf="move?.breakInput?.length">
+    <span>Break Input</span>
+  </div>
+  <div class="section">
+    <span>Special Properties</span>
+  </div>
+</div>

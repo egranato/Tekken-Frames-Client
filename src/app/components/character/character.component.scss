@@ -1,0 +1,32 @@
+.movelist-container {
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movelist-section {
+  padding: 15px 10px;
+  width: 100%;
+  position: relative;
+}
+
+.movelist-item {
+  border: 1px solid #cccccc;
+  position: relative;
+  width: calc(100% - 10px);
+  margin: 0 5px;
+}

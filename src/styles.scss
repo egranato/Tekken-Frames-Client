@@ -11,6 +11,16 @@ body {
 
 body {
   overflow-y: auto;
-  font-family: "Bebas Neue", sans-serif;
-  font-display: swap;
+  background: rgb(89, 11, 57);
+  background: linear-gradient(
+    135deg,
+    rgba(89, 11, 57, 1) 0%,
+    rgba(23, 16, 34, 1) 35%,
+    rgba(34, 57, 76, 1) 100%
+  );
+
+  * {
+    font-family: "Bebas Neue", sans-serif;
+    font-display: swap;
+  }
 }

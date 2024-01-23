@@ -4,5 +4,5 @@ import { CharacterComponent } from './components/character/character.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: ':id', component: CharacterComponent }
+  { path: ':name', component: CharacterComponent },
 ];

@@ -1,0 +1,36 @@
+.move-container {
+  display: flex;
+  position: relative;
+}
+
+.section {
+  flex: 1 1 0px;
+  border-right: 1px solid #cccccc;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:last-child {
+    border: none;
+  }
+
+  span {
+    width: 100%;
+    position: relative;
+    text-decoration: underline;
+  }
+}
+
+.input {
+  width: 100%;
+  display: flex;
+
+  img {
+    height: 50px;
+  }
+}
+
+.default-data {
+  font-size: 32px;
+  padding-top: 10px;
+}
