@@ -1,18 +1,17 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { IMove } from '../../models/move.model';
-import { NgIf } from '@angular/common';
+import { IPunisher } from '../../models/punisher.model';
 import { FormatterService } from '../../services/formatter.service';
 
 @Component({
-  selector: 'T8-movelist-item',
+  selector: 'T8-punisher-item',
   standalone: true,
-  imports: [NgIf],
-  templateUrl: './movelist-item.component.html',
-  styleUrl: './movelist-item.component.scss',
+  imports: [],
+  templateUrl: './punisher-item.component.html',
+  styleUrl: './punisher-item.component.scss',
   encapsulation: ViewEncapsulation.None,
 })
-export class MovelistItemComponent implements OnInit {
-  @Input() move?: IMove;
+export class PunisherItemComponent implements OnInit {
+  @Input() move?: IPunisher;
   inputDisplay: string = '';
   propertiesDisplay: string = '';
 

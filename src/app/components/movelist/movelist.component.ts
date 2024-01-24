@@ -19,7 +19,7 @@ export class MovelistComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.character = this.activatedRoute.snapshot.paramMap.get(
+    this.character = this.activatedRoute.parent?.snapshot.paramMap.get(
       'name',
     ) as string;
     const data = characters.find((c) => c.name === this.character);

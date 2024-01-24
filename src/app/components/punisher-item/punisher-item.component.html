@@ -1,0 +1,24 @@
+<div class="move-container">
+  <div class="section">
+    <span>Startup Frames</span>
+    <div class="default-data">{{ move?.startup }}</div>
+  </div>
+  <div class="section">
+    <span>Input</span>
+    <div class="input" [innerHTML]="inputDisplay"></div>
+  </div>
+  <div class="section">
+    <span>Properties</span>
+    <div class="default-data">
+      {{ propertiesDisplay }}
+    </div>
+  </div>
+  <div class="section">
+    <span>Damage</span>
+    <div class="default-data">{{ move?.damage }}</div>
+  </div>
+  <div class="section">
+    <span>Frame Advantage</span>
+    <div class="default-data">{{ move?.frameAdvantage }}</div>
+  </div>
+</div>

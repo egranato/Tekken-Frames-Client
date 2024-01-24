@@ -1,1 +1,18 @@
-<p class="coming-soon">Coming soon!</p>
+<ng-container *ngIf="punishers != null">
+  <div class="movelist-section">
+    <h3>Normal</h3>
+    <div class="movelist-item" *ngFor="let movelistItem of punishers.normal">
+      <T8-punisher-item [move]="movelistItem"></T8-punisher-item>
+    </div>
+  </div>
+  <div class="movelist-section">
+    <h3>From Crouch</h3>
+    <div
+      class="movelist-item"
+      *ngFor="let movelistItem of punishers.whileStanding"
+    >
+      <T8-punisher-item [move]="movelistItem"></T8-punisher-item>
+    </div>
+  </div>
+</ng-container>
+<p *ngIf="punishers == null" class="coming-soon">Coming soon!</p>

@@ -1,0 +1,19 @@
+.movelist-section {
+  padding: 15px 10px;
+  width: 100%;
+  position: relative;
+}
+
+h3 {
+  font-size: 32px;
+  font-style: italic;
+  width: 100%;
+  border-bottom: 2px solid #f50a64;
+  margin-bottom: 15px;
+}
+
+.movelist-item {
+  position: relative;
+  width: calc(100% - 10px);
+  margin: 0 5px;
+}

@@ -1,4 +1,5 @@
 import { IMoveList } from '../../models/movelist.model';
+import { IPunisherList } from '../../models/punisherlist.model';
 
 const movelist: IMoveList = {
   rage: [
@@ -88,4 +89,32 @@ const movelist: IMoveList = {
   ],
 };
 
-export { movelist };
+const punishers: IPunisherList = {
+  normal: [
+    {
+      startup: 10,
+      input: '1,1',
+      frameAdvantage: '5',
+      properties: 'h,h',
+      damage: '7,18',
+    },
+  ],
+  whileStanding: [
+    {
+      startup: 10,
+      input: 'FC d 1',
+      frameAdvantage: '6',
+      properties: 'sm',
+      damage: '5',
+    },
+    {
+      startup: 11,
+      input: 'ws 4',
+      frameAdvantage: '6',
+      properties: 'm',
+      damage: '15',
+    },
+  ],
+};
+
+export { movelist, punishers };
