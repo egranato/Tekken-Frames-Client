@@ -10,21 +10,31 @@
 .character-frame {
   position: relative;
   width: 100%;
-  display: grid;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
   margin: auto 0;
-  gap: 10px;
   box-sizing: border-box;
-  grid-template-columns: repeat(3,1fr);
 }
 
 .character-panel {
   cursor: pointer;
   height: 150px;
-  width: 100%;
+  width: calc(33% - 10px);
+  margin: 5px;
   position: relative;
   overflow: hidden;
-  clip-path: polygon(5% 0%, 100% 0%, 100% 20%, 100% 95%, 95% 100%, 20% 100%, 0% 100%, 0% 5%);
+  clip-path: polygon(
+    5% 0%,
+    100% 0%,
+    100% 20%,
+    100% 95%,
+    95% 100%,
+    20% 100%,
+    0% 100%,
+    0% 5%
+  );
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 54.62%);
   display: flex;
   flex-direction: column;
@@ -43,7 +53,7 @@
   }
 
   .thumbnail_title {
-    color: rgb(245,10,100);
+    color: rgb(245, 10, 100);
   }
 }
 
@@ -56,8 +66,17 @@
   bottom: 2px;
   left: 2px;
   right: 2px;
-  transition: all .5s ease-out;
-  clip-path: polygon(5% 0%, 100% 0%, 100% 20%, 100% 95%, 95% 100%, 20% 100%, 0% 100%, 0% 5%);
+  transition: all 0.5s ease-out;
+  clip-path: polygon(
+    5% 0%,
+    100% 0%,
+    100% 20%,
+    100% 95%,
+    95% 100%,
+    20% 100%,
+    0% 100%,
+    0% 5%
+  );
 }
 
 .thumbnail_border {
@@ -66,7 +85,16 @@
   width: 100%;
   position: absolute;
   bottom: 0;
-  clip-path: polygon(5% 0%, 100% 0%, 100% 20%, 100% 95%, 95% 100%, 20% 100%, 0% 100%, 0% 5%);
+  clip-path: polygon(
+    5% 0%,
+    100% 0%,
+    100% 20%,
+    100% 95%,
+    95% 100%,
+    20% 100%,
+    0% 100%,
+    0% 5%
+  );
 
   .thumbnail {
     height: calc(100% - 4px);
@@ -76,7 +104,16 @@
     bottom: 2px;
     left: 2px;
     transition: all 1s ease-in;
-    clip-path: polygon(5% 0%, 100% 0%, 100% 20%, 100% 95%, 95% 100%, 20% 100%, 0% 100%, 0% 5%);
+    clip-path: polygon(
+      5% 0%,
+      100% 0%,
+      100% 20%,
+      100% 95%,
+      95% 100%,
+      20% 100%,
+      0% 100%,
+      0% 5%
+    );
     background-color: rgba(0, 0, 0, 0.8);
   }
 
@@ -85,7 +122,16 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    clip-path: polygon(5% 0%, 100% 0%, 100% 20%, 100% 95%, 95% 100%, 20% 100%, 0% 100%, 0% 5%);
+    clip-path: polygon(
+      5% 0%,
+      100% 0%,
+      100% 20%,
+      100% 95%,
+      95% 100%,
+      20% 100%,
+      0% 100%,
+      0% 5%
+    );
   }
 }
 
@@ -98,8 +144,8 @@
   justify-content: flex-end;
   height: 100%;
   z-index: 10;
-  transition: all .5s ease-out;
-  color: #FFFFFF;
+  transition: all 0.5s ease-out;
+  color: #ffffff;
   font-size: 32px;
   font-style: italic;
 }
@@ -139,8 +185,8 @@
     max-width: 1600px;
   }
 
-  .character-frame {
-    grid-template-columns: repeat(6, 1fr);
+  .character-panel {
+    width: calc(16% - 10px);
   }
 }
 
