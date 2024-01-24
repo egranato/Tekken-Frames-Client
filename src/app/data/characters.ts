@@ -1,4 +1,5 @@
 import * as Alisa from './movelists/alisa';
+import * as Claudio from './movelists/claudio';
 
 const characters = [
   {
@@ -10,7 +11,12 @@ const characters = [
   { name: 'Asuka', movelist: null, punishers: null, combos: null },
   { name: 'Azucena', movelist: null, punishers: null, combos: null },
   { name: 'Bryan', movelist: null, punishers: null, combos: null },
-  { name: 'Claudio', movelist: null, punishers: null, combos: null },
+  {
+    name: 'Claudio',
+    movelist: null,
+    punishers: Claudio.punishers,
+    combos: null,
+  },
   { name: 'Devil Jin', movelist: null, punishers: null, combos: null },
   { name: 'Dragunov', movelist: null, punishers: null, combos: null },
   { name: 'Feng', movelist: null, punishers: null, combos: null },
