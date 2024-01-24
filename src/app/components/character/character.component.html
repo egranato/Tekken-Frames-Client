@@ -1,42 +1,17 @@
-<div class="movelist-container">
-  <h1>{{ character }}</h1>
-  <h3 *ngIf="movelist == null">Coming Soon!</h3>
-  <ng-container *ngIf="movelist != null">
-    <div class="movelist-section">
-      <h3>Rage Art</h3>
-      <div class="movelist-item" *ngFor="let movelistItem of movelist?.rage">
-        <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
-      </div>
+<div class="character-container">
+  <div class="character-title">
+    <div class="character-portrait">
+      <div class="bracket"></div>
+      <img [src]="characterImage" [alt]="character + ' portrait'" />
     </div>
-    <div class="movelist-section">
-      <h3>Heat Engagers</h3>
-      <div
-        class="movelist-item"
-        *ngFor="let movelistItem of movelist?.heatEngager"
-      >
-        <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
-      </div>
-    </div>
-    <div class="movelist-section">
-      <h3>Heat Only</h3>
-      <div
-        class="movelist-item"
-        *ngFor="let movelistItem of movelist?.heatOnly"
-      >
-        <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
-      </div>
-    </div>
-    <div class="movelist-section">
-      <h3>Normals</h3>
-      <div class="movelist-item" *ngFor="let movelistItem of movelist?.normal">
-        <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
-      </div>
-    </div>
-    <div class="movelist-section">
-      <h3>Throws</h3>
-      <div class="movelist-item" *ngFor="let movelistItem of movelist?.throws">
-        <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
-      </div>
-    </div>
-  </ng-container>
+    <h1>{{ character }}</h1>
+  </div>
+  <div class="tabs">
+    <a [routerLink]="['/' + character]" routerLinkActive="active">Movelist</a>
+    <a routerLink="punishment" routerLinkActive="active">Punishment</a>
+    <a routerLink="combos" routerLinkActive="active">Combos</a>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

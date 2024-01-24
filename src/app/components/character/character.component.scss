@@ -1,4 +1,4 @@
-.movelist-container {
+.character-container {
   padding-top: 50px;
   position: relative;
   width: 100%;
@@ -9,23 +9,82 @@
   color: #ffffff;
 }
 
-h1 {
-  font-size: 50px;
-}
-
-h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.movelist-section {
-  padding: 15px 10px;
+.character-title {
   width: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+
+  h1 {
+    position: relative;
+    font-size: 50px;
+    font-style: italic;
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    background:
+      top left/32px auto url("/assets/images/angle-top-left.png") no-repeat,
+      bottom right/32px auto url("/assets/images/angle-bottom-right.png")
+        no-repeat;
+  }
+
+  .character-portrait {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin-right: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #f50a64;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
-.movelist-item {
+.tabs {
+  width: 100%;
   position: relative;
-  width: calc(100% - 10px);
-  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+
+  a {
+    cursor: pointer;
+    background: transparent;
+    color: #ffffff;
+    font-size: 32px;
+    border: none;
+    position: relative;
+    padding: 10px 30px;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transition: all 0.3s;
+      background-color: #ffffff;
+      height: 2px;
+      width: 0px;
+    }
+  }
+
+  a.active,
+  a:hover {
+    opacity: 0.9;
+  }
+
+  a.active::after,
+  a:hover::after {
+    width: 100%;
+  }
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  padding: 15px;
 }

@@ -1,0 +1,36 @@
+<ng-container *ngIf="movelist != null">
+  <div class="movelist-section">
+    <h3>Rage Art</h3>
+    <div class="movelist-item" *ngFor="let movelistItem of movelist?.rage">
+      <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
+    </div>
+  </div>
+  <div class="movelist-section">
+    <h3>Heat Engagers</h3>
+    <div
+      class="movelist-item"
+      *ngFor="let movelistItem of movelist?.heatEngager"
+    >
+      <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
+    </div>
+  </div>
+  <div class="movelist-section">
+    <h3>Heat Only</h3>
+    <div class="movelist-item" *ngFor="let movelistItem of movelist?.heatOnly">
+      <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
+    </div>
+  </div>
+  <div class="movelist-section">
+    <h3>Normals</h3>
+    <div class="movelist-item" *ngFor="let movelistItem of movelist?.normal">
+      <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
+    </div>
+  </div>
+  <div class="movelist-section">
+    <h3>Throws</h3>
+    <div class="movelist-item" *ngFor="let movelistItem of movelist?.throws">
+      <T8-movelist-item [move]="movelistItem"></T8-movelist-item>
+    </div>
+  </div>
+</ng-container>
+<p *ngIf="movelist == null" class="coming-soon">Coming soon!</p>
