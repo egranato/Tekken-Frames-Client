@@ -11,9 +11,10 @@ export const routes: Routes = [
     path: ':name',
     component: CharacterComponent,
     children: [
-      { path: '', component: MovelistComponent },
+      { path: 'movelist', component: MovelistComponent },
       { path: 'punishment', component: PunishersComponent },
       { path: 'combos', component: CombosComponent },
+      { path: '**', pathMatch: 'full', redirectTo: 'movelist' },
     ],
   },
 ];
