@@ -15,6 +15,7 @@ export class MovelistItemComponent implements OnInit {
   @Input() move?: IMove;
   inputDisplay: string = '';
   propertiesDisplay: string = '';
+  breakInputDisplay: string = '';
 
   constructor(private formatter: FormatterService) {}
 
@@ -24,6 +25,9 @@ export class MovelistItemComponent implements OnInit {
       this.propertiesDisplay = this.formatter.parseProperties(
         this.move.properties,
       );
+      if (this.move.breakInput) {
+        this.breakInputDisplay = this.formatter.parseMove(this.move.breakInput);
+      }
     }
   }
 }

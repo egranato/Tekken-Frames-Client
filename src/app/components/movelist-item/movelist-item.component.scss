@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .section {
@@ -22,6 +23,12 @@
 .input {
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+    font-size: 45px;
+  }
 
   img {
     height: 50px;

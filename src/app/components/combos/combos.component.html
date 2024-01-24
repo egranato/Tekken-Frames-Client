@@ -1,1 +1,20 @@
-<p class="coming-soon">Coming soon!</p>
+<ng-container *ngIf="combos != null">
+  <div class="movelist-section">
+    <div class="movelist-item" *ngFor="let combo of combos">
+      <div class="move-container">
+        <div class="section full">
+          <div class="default-data">{{ combo.notes }}</div>
+        </div>
+        <div class="section wide">
+          <span>Input</span>
+          <div class="input" [innerHTML]="combo.input"></div>
+        </div>
+        <div class="section small">
+          <span>Damage</span>
+          <div class="default-data">{{ combo.damage }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<p *ngIf="combos == null" class="coming-soon">Coming soon!</p>

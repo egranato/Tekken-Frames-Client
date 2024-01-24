@@ -1,5 +1,6 @@
 import * as Alisa from './movelists/alisa';
 import * as Claudio from './movelists/claudio';
+import * as Shaheen from './movelists/shaheen';
 
 const characters = [
   {
@@ -13,9 +14,9 @@ const characters = [
   { name: 'Bryan', movelist: null, punishers: null, combos: null },
   {
     name: 'Claudio',
-    movelist: null,
+    movelist: Claudio.movelist,
     punishers: Claudio.punishers,
-    combos: null,
+    combos: Claudio.combos,
   },
   { name: 'Devil Jin', movelist: null, punishers: null, combos: null },
   { name: 'Dragunov', movelist: null, punishers: null, combos: null },
@@ -38,7 +39,12 @@ const characters = [
   { name: 'Paul', movelist: null, punishers: null, combos: null },
   { name: 'Raven', movelist: null, punishers: null, combos: null },
   { name: 'Reina', movelist: null, punishers: null, combos: null },
-  { name: 'Shaheen', movelist: null, punishers: null, combos: null },
+  {
+    name: 'Shaheen',
+    movelist: Shaheen.movelist,
+    punishers: Shaheen.punishers,
+    combos: Shaheen.combos,
+  },
   { name: 'Steve', movelist: null, punishers: null, combos: null },
   { name: 'Victor', movelist: null, punishers: null, combos: null },
   { name: 'Xiaoyu', movelist: null, punishers: null, combos: null },

@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .section {
@@ -17,6 +18,12 @@
     text-decoration: underline;
     opacity: 0.9;
   }
+}
+
+.section:nth-child(3),
+.section:nth-child(4),
+.section:nth-child(5) {
+  width: 33.33336%;
 }
 
 .input {
@@ -40,13 +47,10 @@
 }
 
 @media (min-width: 1080px) {
-  .section {
-    width: 25%;
-  }
-}
-
-@media (min-width: 1920px) {
-  .section {
-    flex: 1 1 0px;
+  .section,
+  .section:nth-child(3),
+  .section:nth-child(4),
+  .section:nth-child(5) {
+    width: 20%;
   }
 }

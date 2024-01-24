@@ -1,3 +1,4 @@
+import { ICombo } from '../../models/combo.model';
 import { IMoveList } from '../../models/movelist.model';
 import { IPunisherList } from '../../models/punisherlist.model';
 
@@ -180,4 +181,27 @@ const punishers: IPunisherList = {
   ],
 };
 
-export { movelist, punishers };
+const combos: Array<ICombo> = [
+  {
+    input: 'uf 4;f f 4;b 3;uf 3+4;db 1+2;f f f 2',
+    damage: 69,
+    notes: 'staple',
+  },
+  {
+    input: 'uf 4;f f 4;b 3;uf 3+4;db 1+2;b 3;uf 3+4',
+    damage: 0,
+    notes: 'for wall carry',
+  },
+  {
+    input: 'uf 4;f f 4;b 3;uf 3+4;db 1+2;1;f f f 2',
+    damage: 0,
+    notes: 'hard',
+  },
+  {
+    input: 'uf 4;f f 4;b 3;uf 3+4;db 1+2;1 2;f f f 2',
+    damage: 0,
+    notes: 'very hard',
+  },
+];
+
+export { movelist, punishers, combos };

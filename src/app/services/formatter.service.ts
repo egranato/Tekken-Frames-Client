@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FormatterService {
+  static imageBaseUrl = '/assets/images/icons/';
+
   constructor() {}
 
   public parseProperties(properties: string): string {
@@ -20,6 +22,18 @@ export class FormatterService {
       .join('');
   }
 
+  public parseCombo(input: string): string {
+    const delimiter = document.createElement('img');
+    delimiter.src = FormatterService.imageBaseUrl + 'combo-delimiter.png';
+    delimiter.alt = 'Combo Delimiter';
+    delimiter.title = 'Combo Spacer';
+
+    return input
+      .split(';')
+      .map((i) => this.translateInput(i))
+      .join(delimiter.outerHTML);
+  }
+
   private translateInput(input: string): string {
     return input
       .split(' ')
@@ -28,7 +42,6 @@ export class FormatterService {
   }
 
   private createImageTag(action: string): string {
-    const imageBaseUrl = '/assets/images/icons/';
     const image = document.createElement('img');
     image.classList.add('input-icon');
     image.alt = `${action} Icon`;
@@ -36,12 +49,14 @@ export class FormatterService {
     switch (action) {
       case 'FC':
       case 'ws':
+      case 'or':
+      case 'SNK':
         const paragraph = document.createElement('p');
         paragraph.innerText = action;
         return paragraph.outerHTML;
 
       case 'n':
-        image.src = imageBaseUrl + `${action}.webp`;
+        image.src = FormatterService.imageBaseUrl + `${action}.webp`;
         image.title = this.translateToEnglish(action);
         break;
 
@@ -53,7 +68,7 @@ export class FormatterService {
       case 'b':
       case 'd':
       case 'u':
-        image.src = imageBaseUrl + `tap_${action}.webp`;
+        image.src = FormatterService.imageBaseUrl + `tap_${action}.webp`;
         image.title = this.translateToEnglish(action);
         break;
 
@@ -66,12 +81,14 @@ export class FormatterService {
       case 'd~':
       case 'u~':
         const cleanAction = action.replace('~', '');
-        image.src = imageBaseUrl + `hold_${cleanAction}.webp`;
+        image.src = FormatterService.imageBaseUrl + `hold_${cleanAction}.webp`;
         image.title = `Hold ${this.translateToEnglish(cleanAction)}`;
         break;
 
       default:
-        image.src = imageBaseUrl + `button_${action.replace('+', '')}.webp`;
+        image.src =
+          FormatterService.imageBaseUrl +
+          `button_${action.replace('+', '')}.webp`;
         image.title = action;
         break;
     }

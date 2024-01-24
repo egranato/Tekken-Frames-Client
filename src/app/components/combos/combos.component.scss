@@ -1,0 +1,56 @@
+.move-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.section {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+
+  span {
+    width: 100%;
+    position: relative;
+    text-decoration: underline;
+    opacity: 0.9;
+  }
+}
+
+.section.wide {
+  width: 80%;
+}
+
+.section.small {
+  width: 20%;
+}
+
+.section.full {
+  width: 100%;
+  border: none;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+    font-size: 45px;
+  }
+
+  img {
+    height: 50px;
+  }
+}
+
+.default-data {
+  font-size: 32px;
+  padding-top: 10px;
+}
+
+@media (min-width: 1080px) {
+}

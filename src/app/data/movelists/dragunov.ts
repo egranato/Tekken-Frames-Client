@@ -1,4 +1,3 @@
-import { ICombo } from '../../models/combo.model';
 import { IMoveList } from '../../models/movelist.model';
 import { IPunisherList } from '../../models/punisherlist.model';
 
@@ -94,45 +93,10 @@ const punishers: IPunisherList = {
   normal: [
     {
       startup: 10,
-      input: '2,3',
-      frameAdvantage: '',
+      input: '1,1',
+      frameAdvantage: '5',
       properties: 'h,h',
-      damage: '',
-    },
-    {
-      startup: 10,
-      input: '2,3,df',
-      frameAdvantage: '',
-      properties: 'h,h',
-      damage: '',
-    },
-    {
-      startup: 12,
-      input: 'f 2,3',
-      frameAdvantage: '',
-      properties: 'h,h',
-      damage: '',
-    },
-    {
-      startup: 14,
-      input: 'db 2,1',
-      frameAdvantage: 'KND',
-      properties: 'm,h',
-      damage: '',
-    },
-    {
-      startup: 15,
-      input: 'df 2',
-      frameAdvantage: 'Launch',
-      properties: 'm',
-      damage: '',
-    },
-    {
-      startup: 15,
-      input: 'uf 4',
-      frameAdvantage: 'Launch',
-      properties: 'm',
-      damage: '',
+      damage: '7,18',
     },
   ],
   whileStanding: [
@@ -146,40 +110,11 @@ const punishers: IPunisherList = {
     {
       startup: 11,
       input: 'ws 4',
-      frameAdvantage: '',
+      frameAdvantage: '6',
       properties: 'm',
-      damage: '',
-    },
-    {
-      startup: 13,
-      input: 'ws 3,3',
-      frameAdvantage: 'KND',
-      properties: 'm,m',
-      damage: '',
-    },
-    {
-      startup: 15,
-      input: 'ws 2',
-      frameAdvantage: 'Launch',
-      properties: 'm',
-      damage: '',
-    },
-    {
-      startup: 15,
-      input: 'uf 4',
-      frameAdvantage: 'Launch',
-      properties: 'm',
-      damage: '',
+      damage: '15',
     },
   ],
 };
 
-const combos: Array<ICombo> = [
-  {
-    input: 'uf 4;3 df~;SNK 2;df 4 1 df~;db;n;ws 3 3;db 2 df~;SNK 3',
-    damage: 0,
-    notes: 'staple',
-  },
-];
-
-export { movelist, punishers, combos };
+export { movelist, punishers };
