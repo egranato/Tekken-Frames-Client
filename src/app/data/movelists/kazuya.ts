@@ -100,6 +100,13 @@ const punishers: IPunisherList = {
       damage: '',
     },
     {
+      startup: 10,
+      input: '1,2,2',
+      frameAdvantage: '',
+      properties: 'h,h,h',
+      damage: '',
+    },
+    {
       startup: 11,
       input: 'b 1,2',
       frameAdvantage: 'KND',
@@ -141,6 +148,13 @@ const punishers: IPunisherList = {
       input: 'ws 1,2',
       frameAdvantage: 'Launch',
       properties: 'm,m',
+      damage: '',
+    },
+    {
+      startup: 16,
+      input: 'ws 2',
+      frameAdvantage: 'Launch',
+      properties: 'm',
       damage: '',
     },
   ],

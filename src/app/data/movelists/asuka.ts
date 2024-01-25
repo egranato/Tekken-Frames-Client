@@ -93,10 +93,17 @@ const punishers: IPunisherList = {
   normal: [
     {
       startup: 10,
-      input: '1,1',
-      frameAdvantage: '5',
-      properties: 'h,h',
-      damage: '7,18',
+      input: '1,3',
+      frameAdvantage: '',
+      properties: 'h,l',
+      damage: '',
+    },
+    {
+      startup: 12,
+      input: '2,4',
+      frameAdvantage: '',
+      properties: 'h,m',
+      damage: '',
     },
   ],
   whileStanding: [

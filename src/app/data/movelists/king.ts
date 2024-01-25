@@ -98,14 +98,35 @@ const punishers: IPunisherList = {
       properties: 'h,m',
       damage: '',
     },
+    {
+      startup: 12,
+      input: 'b1,2',
+      frameAdvantage: '',
+      properties: 'h,h',
+      damage: '',
+    },
+    {
+      startup: 14,
+      input: '1+2,2',
+      frameAdvantage: 'KND',
+      properties: 'm,m',
+      damage: '',
+    },
+    {
+      startup: 15,
+      input: 'uf 4',
+      frameAdvantage: 'Launch',
+      properties: 'm',
+      damage: '',
+    },
   ],
   whileStanding: [
     {
       startup: 10,
-      input: 'FC d 1',
-      frameAdvantage: '6',
-      properties: 'sm',
-      damage: '5',
+      input: 'FC d 1,2',
+      frameAdvantage: '',
+      properties: 'sm,m',
+      damage: '',
     },
     {
       startup: 11,
@@ -113,6 +134,13 @@ const punishers: IPunisherList = {
       frameAdvantage: '6',
       properties: 'm',
       damage: '15',
+    },
+    {
+      startup: 15,
+      input: 'ws 1+2',
+      frameAdvantage: 'Launch',
+      properties: 'm',
+      damage: '',
     },
   ],
 };
