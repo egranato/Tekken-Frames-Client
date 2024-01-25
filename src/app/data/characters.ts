@@ -1,4 +1,6 @@
 import * as Alisa from './movelists/alisa';
+import * as Jin from './movelists/jin';
+import * as Kazuya from './movelists/kazuya';
 import * as Claudio from './movelists/claudio';
 import * as Shaheen from './movelists/shaheen';
 
@@ -23,9 +25,19 @@ const characters = [
   { name: 'Feng', movelist: null, punishers: null, combos: null },
   { name: 'Hwoarang', movelist: null, punishers: null, combos: null },
   { name: 'Jack-8', movelist: null, punishers: null, combos: null },
-  { name: 'Jin', movelist: null, punishers: null, combos: null },
+  {
+    name: 'Jin',
+    movelist: Jin.movelist,
+    punishers: Jin.punishers,
+    combos: Jin.combos,
+  },
   { name: 'Jun', movelist: null, punishers: null, combos: null },
-  { name: 'Kazuya', movelist: null, punishers: null, combos: null },
+  {
+    name: 'Kazuya',
+    movelist: Kazuya.movelist,
+    punishers: Kazuya.punishers,
+    combos: Kazuya.combos,
+  },
   { name: 'King', movelist: null, punishers: null, combos: null },
   { name: 'Kuma', movelist: null, punishers: null, combos: null },
   { name: 'Lars', movelist: null, punishers: null, combos: null },

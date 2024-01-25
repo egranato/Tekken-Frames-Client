@@ -1,3 +1,4 @@
+import { ICombo } from '../../models/combo.model';
 import { IMoveList } from '../../models/movelist.model';
 import { IPunisherList } from '../../models/punisherlist.model';
 
@@ -39,7 +40,7 @@ const movelist: IMoveList = {
   heatOnly: [
     {
       input: '2+3',
-      properties: 'm',
+      properties: 'l',
       damage: '50',
       startup: '20',
       blockFrames: '',
@@ -98,6 +99,27 @@ const punishers: IPunisherList = {
       properties: 'h,h,m',
       damage: '',
     },
+    {
+      startup: 11,
+      input: 'b 1,2',
+      frameAdvantage: 'KND',
+      properties: 'h,m',
+      damage: '',
+    },
+    {
+      startup: 13,
+      input: 'df 4,4',
+      frameAdvantage: '',
+      properties: 'm,m',
+      damage: '',
+    },
+    {
+      startup: 13,
+      input: 'f n d df 2',
+      frameAdvantage: 'Launch',
+      properties: 'h',
+      damage: '',
+    },
   ],
   whileStanding: [
     {
@@ -109,12 +131,27 @@ const punishers: IPunisherList = {
     },
     {
       startup: 11,
-      input: 'ws 4',
-      frameAdvantage: '6',
-      properties: 'm',
-      damage: '15',
+      input: 'ws 4,4',
+      frameAdvantage: '',
+      properties: 'm,m',
+      damage: '',
+    },
+    {
+      startup: 13,
+      input: 'ws 1,2',
+      frameAdvantage: 'Launch',
+      properties: 'm,m',
+      damage: '',
     },
   ],
 };
 
-export { movelist, punishers };
+const combos: Array<ICombo> = [
+  {
+    input: 'f n d df 2;f n d df 2;df~ 1 2;df 3 1 df~;3',
+    damage: 0,
+    notes: 'staple',
+  },
+];
+
+export { movelist, punishers, combos };
