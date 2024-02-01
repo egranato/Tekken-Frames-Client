@@ -37,24 +37,16 @@ export class FormatterService {
   private translateInput(input: string): string {
     return input
       .split(' ')
-      .map((x) => this.createImageTag(x))
+      .map((x) => this.createElement(x))
       .join('');
   }
 
-  private createImageTag(action: string): string {
+  private createElement(action: string): string {
     const image = document.createElement('img');
     image.classList.add('input-icon');
     image.alt = `${action} Icon`;
 
     switch (action) {
-      case 'FC':
-      case 'ws':
-      case 'or':
-      case 'SNK':
-        const paragraph = document.createElement('p');
-        paragraph.innerText = action;
-        return paragraph.outerHTML;
-
       case 'n':
         image.src = FormatterService.imageBaseUrl + `${action}.webp`;
         image.title = this.translateToEnglish(action);
@@ -86,10 +78,15 @@ export class FormatterService {
         break;
 
       default:
-        image.src =
-          FormatterService.imageBaseUrl +
-          `button_${action.replace('+', '')}.webp`;
-        image.title = action;
+        if (/^\d+$/.test(action)) {
+          image.src = FormatterService.imageBaseUrl + `button_${action}.webp`;
+          image.title = action.split('').join('+');
+        } else {
+          const paragraph = document.createElement('p');
+          paragraph.innerText = action;
+          return paragraph.outerHTML;
+        }
+
         break;
     }
 
