@@ -98,11 +98,11 @@ export class FormatterService {
       .split('')
       .map((x) => {
         return x
+          .replace(/n/g, 'Neutral')
           .replace(/d/g, 'Down')
           .replace(/f/g, 'Forward')
           .replace(/u/g, 'Up')
           .replace(/b/g, 'Back')
-          .replace(/n/g, 'Neutral')
           .replace(/h/g, 'High')
           .replace(/l/g, 'Low')
           .replace(/m/g, 'Mid')

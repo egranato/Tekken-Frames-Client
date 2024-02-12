@@ -17,7 +17,13 @@
     position: relative;
     text-decoration: underline;
     opacity: 0.9;
+    color: #00c2e0;
   }
+}
+
+.section:first-child,
+.section:nth-child(2) {
+  width: 100%;
 }
 
 .input {
@@ -29,11 +35,11 @@
 
   p {
     font-size: 35px;
-    margin: 0 10px;
+    margin: 0 5px;
   }
 
   img {
-    height: 30px;
+    height: 40px;
   }
 }
 
@@ -44,8 +50,17 @@
 
 @media (min-width: 1080px) {
   .section {
-    width: 25%;
+    width: 33.333336%;
   }
+
+  .section:first-child {
+    width: 60%;
+  }
+
+  .section:nth-child(2) {
+    width: 40%;
+  }
+
   .input img {
     height: 50px;
   }
@@ -57,6 +72,10 @@
   }
 
   .section:first-child {
-    width: 30%;
+    width: 25%;
+  }
+
+  .section:nth-child(2) {
+    width: 15%;
   }
 }
