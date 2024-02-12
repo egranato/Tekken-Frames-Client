@@ -9,7 +9,7 @@ const movelist: IMoveList = {
       properties: 'm',
       damage: '55',
       startup: '20',
-      blockFrames: '',
+      blockFrames: '-15',
       hitFrames: 'KND',
       counterFrames: 'KND',
       breakInput: '',
@@ -1585,6 +1585,11 @@ const combos: Array<ICombo> = [
   },
   {
     input: 'ws 2;b 3;b 3;f 2;dash;b 3;d 1 2;f f f~ 2',
+    damage: 65,
+    notes: 'staple',
+  },
+  {
+    input: 'f 34;db 12;f f~ 4;b 3;f 2;b 4 2',
     damage: 65,
     notes: 'staple',
   },

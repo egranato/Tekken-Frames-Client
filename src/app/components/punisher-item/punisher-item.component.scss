@@ -31,13 +31,14 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 
   p {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   img {
-    height: 50px;
+    height: 35px;
   }
 }
 
@@ -52,5 +53,9 @@
   .section:nth-child(4),
   .section:nth-child(5) {
     width: 20%;
+  }
+
+  .input img {
+    height: 50px;
   }
 }

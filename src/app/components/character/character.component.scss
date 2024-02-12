@@ -30,8 +30,8 @@
   }
 
   .character-portrait {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     position: relative;
     margin-right: 50px;
     overflow: hidden;
@@ -54,7 +54,7 @@
     cursor: pointer;
     background: transparent;
     color: #ffffff;
-    font-size: 32px;
+    font-size: 20px;
     border: none;
     position: relative;
     padding: 10px 30px;
@@ -87,4 +87,16 @@
   position: relative;
   width: 100%;
   padding: 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1080px) {
+  .character-title .character-portrait {
+    height: 150px;
+    width: 150px;
+  }
+
+  .tabs a {
+    font-size: 32px;
+  }
 }
