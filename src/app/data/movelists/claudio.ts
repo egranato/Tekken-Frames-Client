@@ -1569,17 +1569,17 @@ const punishers: IPunisherList = {
 
 const combos: Array<ICombo> = [
   {
-    input: 'uf 4;f f 4;b 3;uf 34;db 12;f f f~ 2',
+    input: 'uf 4;f f~ 4;b 3;uf 34;db 12;f f f~ 2',
     damage: 64,
     notes: 'staple',
   },
   {
-    input: 'uf 4;f f 4;b 3;uf 34;db 12;b 3;uf 3+4',
+    input: 'uf 4;f f~ 4;b 3;uf 34;db 12;b 3;uf 34',
     damage: 59,
     notes: 'for wall carry',
   },
   {
-    input: 'uf 4;f f 4;b 3;uf 34;db 12;1;f f f~ 2',
+    input: 'uf 4;f f~ 4;b 3;uf 34;db 12;1;f f f~ 2',
     damage: 65,
     notes: 'hard',
   },
