@@ -1584,8 +1584,8 @@ const combos: Array<ICombo> = [
     notes: 'hard',
   },
   {
-    input: 'ws 2;b 3;b 3;f 2;dash;b 3;d 1 2;f f f~ 2',
-    damage: 65,
+    input: 'ws 2;b 3;f 2;f f~ 4;b 3;d 1 2;f f f~ 2',
+    damage: 67,
     notes: 'staple',
   },
   {
