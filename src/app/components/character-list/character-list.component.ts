@@ -1,7 +1,9 @@
 import { NgFor, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { characters } from '../../data/characters';
+
+const ORIGINAL_TITLE = 'Tekken 8 Frame Data';
 
 @Component({
   selector: 'T8-character-list',
@@ -10,11 +12,15 @@ import { characters } from '../../data/characters';
   templateUrl: './character-list.component.html',
   styleUrl: './character-list.component.scss',
 })
-export class CharacterListComponent {
+export class CharacterListComponent implements OnInit {
   characters: Array<string> = [];
 
   constructor(private router: Router) {
     this.characters = characters.map((c) => c.name);
+  }
+
+  ngOnInit(): void {
+    document.title = ORIGINAL_TITLE;
   }
 
   navigateToCharacter(name: string): void {
