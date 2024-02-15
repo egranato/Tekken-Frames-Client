@@ -37,8 +37,8 @@
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 54.62%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
   text-transform: uppercase;
 }
 
@@ -159,17 +159,11 @@
   }
 }
 
-@media (min-width: 1079px) {
+@media (min-width: 1080px) {
   .character-panel {
     height: 355px;
   }
 
-  .container {
-    max-width: 1040px;
-  }
-}
-
-@media (min-width: 1080px) {
   .container {
     max-width: 1380px;
   }
