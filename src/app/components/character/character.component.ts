@@ -23,6 +23,7 @@ export class CharacterComponent implements OnInit {
     this.character = this.activatedRoute.snapshot.paramMap.get(
       'name',
     ) as string;
+    document.title = `${this.character} Frame Data`;
     this.characterImage = `/assets/images/character-portraits/${this.character.toLowerCase().replace(' ', '-')}.webp`;
   }
 }
