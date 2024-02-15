@@ -39,5 +39,31 @@
   </div>
   <div class="section">
     <span>Special Properties</span>
+    <div class="properties">
+      <img
+        *ngIf="move?.heatEngager"
+        title="Heat Engager"
+        src="/assets/images/icons/Heat.svg"
+        alt="Heat Engager Icon"
+      />
+      <img
+        *ngIf="move?.homing"
+        title="Homing"
+        src="/assets/images/icons/Homing.svg"
+        alt="Homing Icon"
+      />
+      <img
+        *ngIf="move?.tailSpin"
+        title="Tornado"
+        src="/assets/images/icons/Tornado.svg"
+        alt="Tornado Icon"
+      />
+      <img
+        *ngIf="move?.powerCrush"
+        title="Power Crush"
+        src="/assets/images/icons/PowerCrush.svg"
+        alt="Power Crush Icon"
+      />
+    </div>
   </div>
 </div>

@@ -232,7 +232,7 @@ const movelist: IMoveList = {
       tailSpin: false,
       homing: false,
       powerCrush: false,
-      heatEngager: true,
+      heatEngager: false,
       unblockable: false,
     },
     {

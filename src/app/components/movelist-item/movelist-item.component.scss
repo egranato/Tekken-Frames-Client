@@ -48,6 +48,26 @@
   padding-top: 10px;
 }
 
+.properties {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+  }
+
+  img:last-child {
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 1080px) {
   .section {
     width: 33.333336%;
