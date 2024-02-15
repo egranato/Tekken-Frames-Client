@@ -1,6 +1,13 @@
 {
   "navigationFallback": {
     "rewrite": "index.html",
-    "exclude": ["/images/*.{png,jpg,gif,ico,webp,svg}", "/*.{css,scss,js}"]
+    "exclude": [
+      "/assets/images/*.{png,jpg,gif,ico,webp,svg}",
+      "/*.{css,scss,js}"
+    ]
+  },
+  "route": "/assets/images/*.{png,jpg,gif,ico,webp,svg}",
+  "headers": {
+    "Cache-Control": "public, max-age=604800, immutable"
   }
 }
